@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         YouTubeDesktopFeedSizeFix
-// @namespace    https://github.com/r57zone/YouTubeDesktopFeedSizeFix
-// @version      1.0
+// @name         YouTube Desktop Feed
+// @namespace    r57zone userscripts youtube
+// @version      1.1
 // @match        https://www.youtube.com/*
 // @run-at       document-start
 // ==/UserScript==
@@ -19,7 +19,7 @@
 
       style.textContent =
           '#content.ytd-rich-section-renderer {' +
-          'width: 50% !important;' +
+          'width: 70% !important;' +
           '}';
   	}
 
@@ -28,9 +28,9 @@
         const grids = document.querySelectorAll('ytd-rich-grid-renderer');
 
         grids.forEach(function(grid) {
-            grid.setAttribute('elements-per-row', '6');
+            grid.setAttribute('elements-per-row', '5');
             grid.style.setProperty('--ytd-rich-grid-item-max-width', '320px', 'important');
-            grid.style.setProperty('--ytd-rich-grid-items-per-row', '6', 'important');
+            grid.style.setProperty('--ytd-rich-grid-items-per-row', '5', 'important');
         });
     }
   
