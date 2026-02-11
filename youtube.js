@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube Desktop Feed
 // @namespace    r57zone userscripts youtube
-// @version      1.1
+// @version      1.2
 // @match        https://www.youtube.com/*
 // @run-at       document-start
 // ==/UserScript==
@@ -49,7 +49,7 @@
 
     // после загрузки
     window.addEventListener('load', function() {
-        setTimeout(waitForGrid, 800);
+        setTimeout(waitForGrid, 1500);
     });
 
     // при SPA-навигации
